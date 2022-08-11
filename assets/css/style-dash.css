@@ -230,5 +230,6 @@ h4{
 #divConsultaAlunos{
   border: 1px solid #20665C;
   display: flex;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
+

@@ -48,7 +48,8 @@ var sessaoConsultaTurmas              = document.getElementById('container-consu
 
 var sessaoCadastro                    = document.getElementById('container-cadastro')
 
-
+var btnCadastro                       = document.getElementById('btn-cadastro')
+var btnConsulta                       = document.getElementById('btn-consulta')
 
 ////////////////////////////////-- ALUNOS -- /////////////////////////////////
 
@@ -136,11 +137,15 @@ function exibeOptionAluno(tipo) {
     let opProfessor             = document.getElementById('divCadastroProfessores')
     let opTurmas                = document.getElementById('divCadastroTurmas')
 
+    btnCadastro.style.backgroundColor = '#CEA347'
+    btnConsulta.style.backgroundColor = '#20665C'
+
     // O valor de tipo vem do param 'tipo' que cada função 'exibeOption' recebe
     switch (tipo) {
 
         //Alunos
       case 0:
+
         sessaoCadastro.style.display                = 'block'
 
         sessaoConsultaAlunos.style.display          = 'none'
@@ -190,7 +195,13 @@ function exibeAlunosConsulta(tipo) {
     let opAlunoMaior                                = document.getElementById('divConsultaAlunos')
     let opAlunoMenor                                = document.getElementById('divConsultaAlunos')
 
-    opAlunoTodos.style.textTransform = 'uppercase'
+    btnCadastro.style.backgroundColor = '#20665C'
+    btnConsulta.style.backgroundColor = '#CEA347'
+ 
+    opAlunoTodos.innerHTML.toUpperCase
+    opAlunoMaior.innerHTML.toUpperCase
+    opAlunoMenor.innerHTML.toUpperCase
+
 
     switch (tipo) {
 
@@ -317,6 +328,8 @@ function exibeProfConsulta(tipo) {
     let sessaoConsultaProfessores  = document.getElementById('container-consulta-prof')
     let opProfTodos                = document.getElementById('divConsultaProfessores')
 
+    btnCadastro.style.backgroundColor = '#20665C'
+    btnConsulta.style.backgroundColor = '#CEA347'
 
     switch (tipo) {
 
@@ -455,13 +468,15 @@ function exibeTurnoNoite(){
 
 /////// CONSULTA TURMA 
 function exibeTurmasConsulta(tipo) {
-    let  sessaoConsultaTurmas = document.getElementById('container-consulta-turmas')
+    let sessaoConsultaTurmas = document.getElementById('container-consulta-turmas')
     let opTurmaTodas = document.getElementById('divConsultaTurmas')
     let opTurmaManha = document.getElementById('divConsultaTurmas')
     let opTurmaTarde = document.getElementById('divConsultaTurmas')
     let opTurmaNoite = document.getElementById('divConsultaTurmas')
 
-
+    btnCadastro.style.backgroundColor = '#20665C'
+    btnConsulta.style.backgroundColor = '#CEA347'
+    
     switch (tipo) {
 
         case 0:
