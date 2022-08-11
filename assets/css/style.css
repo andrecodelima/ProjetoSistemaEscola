@@ -448,3 +448,25 @@ body::-webkit-scrollbar-thumb {
                           FOOTER                         
    -------------------------------------------------------- */
 
+   @media(max-width:540px){
+    .nav-item, 
+    #btn-login{
+        display: none;
+    }   
+
+    .um,
+    .dois,
+    .tres{
+        border: 2px solid #fff;
+        background-color: #fff;
+        height: 5px;
+        width: 50px;
+        margin: 6px auto;
+    }
+
+     /* .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    } */
+}
