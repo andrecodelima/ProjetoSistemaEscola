@@ -42,9 +42,9 @@ var opProfTodos                       = document.getElementById('divConsultaProf
 var opAlunoTodos                      = document.getElementById('divConsultaAlunos')
 var opTurmaTodas                      = document.getElementById('divConsultaTurmas')
 
-var sessaoConsultaAlunos                    = document.getElementById('container-consulta-alunos')
-var sessaoConsultaProfessores                    = document.getElementById('container-consulta-prof')
-var sessaoConsultaTurmas                    = document.getElementById('container-consulta-turmas')
+var sessaoConsultaAlunos              = document.getElementById('container-consulta-alunos')
+var sessaoConsultaProfessores         = document.getElementById('container-consulta-prof')
+var sessaoConsultaTurmas              = document.getElementById('container-consulta-turmas')
 
 var sessaoCadastro                    = document.getElementById('container-cadastro')
 
@@ -134,49 +134,49 @@ function exibeOptionAluno(tipo) {
     let sessaoCadastro          = document.getElementById('container-cadastro')
     let opAluno                 = document.getElementById('divCadastroAlunos')
     let opProfessor             = document.getElementById('divCadastroProfessores')
-    let opTurmas                 = document.getElementById('divCadastroTurmas')
+    let opTurmas                = document.getElementById('divCadastroTurmas')
 
     // O valor de tipo vem do param 'tipo' que cada função 'exibeOption' recebe
     switch (tipo) {
 
         //Alunos
       case 0:
-        sessaoCadastro.style.display    = 'block'
+        sessaoCadastro.style.display                = 'block'
 
-        sessaoConsultaAlunos.style.display    = 'none'
-        sessaoConsultaProfessores.style.display    = 'none'
-        sessaoConsultaTurmas .style.display    = 'none'
+        sessaoConsultaAlunos.style.display          = 'none'
+        sessaoConsultaProfessores.style.display     = 'none'
+        sessaoConsultaTurmas .style.display         = 'none'
         
-        opAluno.style.display           = 'block'
-        opProfessor.style.display       = 'none'
-        opTurmas.style.display          = 'none'
+        opAluno.style.display                       = 'block'
+        opProfessor.style.display                   = 'none'
+        opTurmas.style.display                      = 'none'
         break
 
         //Professores
       case 1:
-        sessaoCadastro.style.display    = 'block'
+        sessaoCadastro.style.display                = 'block'
 
-        sessaoConsultaAlunos.style.display    = 'none'
-        sessaoConsultaProfessores.style.display    = 'none'
-        sessaoConsultaTurmas .style.display    = 'none'
+        sessaoConsultaAlunos.style.display          = 'none'
+        sessaoConsultaProfessores.style.display     = 'none'
+        sessaoConsultaTurmas .style.display         = 'none'
 
 
-        opProfessor.style.display       = 'block'
-        opAluno.style.display           = 'none'
-        opTurmas.style.display          = 'none'
+        opProfessor.style.display                   = 'block'
+        opAluno.style.display                       = 'none'
+        opTurmas.style.display                      = 'none'
         break
 
         //Turmas
       case 2:
-        sessaoCadastro.style.display    = 'block'
+        sessaoCadastro.style.display                = 'block'
 
-        sessaoConsultaAlunos.style.display    = 'none'
-        sessaoConsultaProfessores.style.display    = 'none'
-        sessaoConsultaTurmas .style.display    = 'none'
+        sessaoConsultaAlunos.style.display          = 'none'
+        sessaoConsultaProfessores.style.display     = 'none'
+        sessaoConsultaTurmas .style.display         = 'none'
 
-        opTurmas.style.display          = 'block'
-        opAluno.style.display           = 'none'
-        opProfessor.style.display       = 'none'
+        opTurmas.style.display                      = 'block'
+        opAluno.style.display                       = 'none'
+        opProfessor.style.display                   = 'none'
 
         break
     }
@@ -185,56 +185,57 @@ function exibeOptionAluno(tipo) {
   
 // FUNÇÃO DE EXIBIÇÃO DE CONSULTA NA TELA - ALUNOS
 function exibeAlunosConsulta(tipo) {
-    let sessaoConsultaAlunos                  = document.getElementById('container-consulta-alunos')
-    let opAlunoTodos                    = document.getElementById('divConsultaAlunos')
-    let opAlunoMaior                    = document.getElementById('divConsultaAlunos')
-    let opAlunoMenor                    = document.getElementById('divConsultaAlunos')
+    let sessaoConsultaAlunos                        = document.getElementById('container-consulta-alunos')
+    let opAlunoTodos                                = document.getElementById('divConsultaAlunos')
+    let opAlunoMaior                                = document.getElementById('divConsultaAlunos')
+    let opAlunoMenor                                = document.getElementById('divConsultaAlunos')
 
+    opAlunoTodos.style.textTransform = 'uppercase'
 
     switch (tipo) {
 
         case 0:
-            sessaoConsultaAlunos.style.display    = 'block'
-            sessaoConsultaProfessores.style.display    = 'none'
-            sessaoConsultaTurmas.style.display    = 'none'
+            sessaoConsultaAlunos.style.display       = 'block'
+            sessaoConsultaProfessores.style.display  = 'none'
+            sessaoConsultaTurmas.style.display       = 'none'
 
-            opAlunoTodos.style.display      = 'block'
+            opAlunoTodos.style.display               = 'block'
 
-            sessaoCadastro.style.display    = 'none'
+            sessaoCadastro.style.display             = 'none'
 
-            opProfTodos.style.display       = 'none'
-            opTurmaTodas.style.display      = 'none'
+            opProfTodos.style.display                = 'none'
+            opTurmaTodas.style.display               = 'none'
 
             exibirAlunoTodos()
             break
 
         case 1:
 
-            sessaoConsultaAlunos.style.display    = 'block'
+            sessaoConsultaAlunos.style.display         = 'block'
             sessaoConsultaProfessores.style.display    = 'none'
-            sessaoConsultaTurmas.style.display    = 'none'
+            sessaoConsultaTurmas.style.display         = 'none'
 
 
-            opAlunoMaior.style.display      = 'block'
-            sessaoCadastro.style.display    = 'none'
+            opAlunoMaior.style.display                 = 'block'
+            sessaoCadastro.style.display               = 'none'
 
-            opProfTodos.style.display       = 'none'
-            opTurmaTodas.style.display      = 'none'
+            opProfTodos.style.display                  = 'none'
+            opTurmaTodas.style.display                 = 'none'
 
             exibirAlunoMaior()
             break
     
         case 2:
-            sessaoConsultaAlunos.style.display    = 'block'
-            sessaoConsultaProfessores.style.display    = 'none'
-            sessaoConsultaTurmas.style.display    = 'none'
+            sessaoConsultaAlunos.style.display          = 'block'
+            sessaoConsultaProfessores.style.display     = 'none'
+            sessaoConsultaTurmas.style.display          = 'none'
 
-            opAlunoMenor.style.display      = 'block'
+            opAlunoMenor.style.display                  = 'block'
 
-            sessaoCadastro.style.display    = 'none'
+            sessaoCadastro.style.display                = 'none'
 
-            opProfTodos.style.display       = 'none'
-            opTurmaTodas.style.display      = 'none'
+            opProfTodos.style.display                   = 'none'
+            opTurmaTodas.style.display                  = 'none'
 
             exibirAlunoMenor()
             break
@@ -314,22 +315,22 @@ function exibirProfTodos(){
 /// CONSULTA - PROFESSORES
 function exibeProfConsulta(tipo) {
     let sessaoConsultaProfessores  = document.getElementById('container-consulta-prof')
-    let opProfTodos     = document.getElementById('divConsultaProfessores')
+    let opProfTodos                = document.getElementById('divConsultaProfessores')
 
 
     switch (tipo) {
 
         case 0:
             sessaoConsultaProfessores.style.display = 'block'
-            sessaoConsultaAlunos.style.display = 'none'
-            sessaoConsultaTurmas.style.display = 'none'
+            sessaoConsultaAlunos.style.display      = 'none'
+            sessaoConsultaTurmas.style.display      = 'none'
 
 
-            opProfTodos.style.display    = 'block'
+            opProfTodos.style.display               = 'block'
 
-            sessaoCadastro.style.display    = 'none'
+            sessaoCadastro.style.display            = 'none'
 
-            opAlunoTodos.style.display    = 'none'
+            opAlunoTodos.style.display              = 'none'
             exibirProfTodos()
             break
 
@@ -464,44 +465,44 @@ function exibeTurmasConsulta(tipo) {
     switch (tipo) {
 
         case 0:
-            sessaoConsultaTurmas.style.display    = 'block'
-            sessaoConsultaAlunos.style.display    = 'none'
-            sessaoConsultaProfessores.style.display    = 'none'
+            sessaoConsultaTurmas.style.display          = 'block'
+            sessaoConsultaAlunos.style.display          = 'none'
+            sessaoConsultaProfessores.style.display     = 'none'
 
-            opTurmaTodas.style.display      = 'block'
+            opTurmaTodas.style.display                  = 'block'
 
-            sessaoCadastro.style.display    = 'none'
+            sessaoCadastro.style.display                = 'none'
             
-            opAlunoTodos.style.display       = 'none'
-            opProfTodos.style.display        = 'none'
+            opAlunoTodos.style.display                  = 'none'
+            opProfTodos.style.display                   = 'none'
 
             exibirTurmas()
             break
         
         case 1:
-            sessaoConsultaTurmas.style.display    = 'block'
-            sessaoConsultaAlunos.style.display    = 'none'
-            sessaoConsultaProfessores.style.display    = 'none'
+            sessaoConsultaTurmas.style.display           = 'block'
+            sessaoConsultaAlunos.style.display           = 'none'
+            sessaoConsultaProfessores.style.display      = 'none'
 
-            opTurmaManha.style.display      = 'block'
+            opTurmaManha.style.display                   = 'block'
             exibeTurnoManha()
             break
 
         case 2:
-            sessaoConsultaTurmas.style.display    = 'block'
-            sessaoConsultaAlunos.style.display    = 'none'
-            sessaoConsultaProfessores.style.display    = 'none'
+            sessaoConsultaTurmas.style.display          = 'block'
+            sessaoConsultaAlunos.style.display          = 'none'
+            sessaoConsultaProfessores.style.display     = 'none'
 
-            opTurmaTarde.style.display      = 'block'
+            opTurmaTarde.style.display                  = 'block'
             opTurmaTarde()
             break
         
         case 3:
-            sessaoConsultaTurmas.style.display    = 'block'
-            sessaoConsultaAlunos.style.display    = 'none'
-            sessaoConsultaProfessores.style.display    = 'none'
+            sessaoConsultaTurmas.style.display          = 'block'
+            sessaoConsultaAlunos.style.display          = 'none'
+            sessaoConsultaProfessores.style.display     = 'none'
 
-            opTurmaNoite.style.display      = 'block'
+            opTurmaNoite.style.display                  = 'block'
             opTurmaNoite()
             break
         
@@ -515,25 +516,10 @@ function exibeTurmasConsulta(tipo) {
 
 ////////////////////////////////-- GERAL -- /////////////////////////////////
 
-// var alunoGeral = exibirAlunoTodos()
-// var profGeral  = exibirProfTodos()
-// var turmaGeral = exibirTurmas()
-
-// var geral = [alunoGeral, profGeral, turmaGeral]
-
-// function exibeGeral(tipo) {
-
-//     switch(tipo){
-//         case 0:
-//             exibirAlunoTodos()
-//             break
-//     }
-// }
-
 function exibeGeral(tipo) {
-    let cartoesAluno            = ''
-    let cartoesTurma            = ''
-    let cartoesProf             = ''
+    let cartoesAluno                = ''
+    let cartoesTurma                = ''
+    let cartoesProf                 = ''
 
     let sessaoConsultaAlunos         = document.getElementById('container-consulta-alunos')
     let sessaoConsultaProfessores    = document.getElementById('container-consulta-prof')
@@ -547,13 +533,13 @@ function exibeGeral(tipo) {
     switch (tipo) {
         
         case 0:
-            sessaoCadastro.style.display    = 'none'
+            sessaoCadastro.style.display              = 'none'
 
             sessaoConsultaAlunos.style.display        = 'block'
             sessaoConsultaProfessores.style.display   = 'none'
             sessaoConsultaTurmas.style.display        = 'none'
 
-            Aluno.style.display                 = 'block'
+            Aluno.style.display                       = 'block'
             for(let i in bancoAlunos){ 
                 cartoesAluno += bancoAlunos[i].cardAluno();
             }
@@ -561,13 +547,13 @@ function exibeGeral(tipo) {
             break
 
         case 1:
-            sessaoCadastro.style.display    = 'none'
+            sessaoCadastro.style.display              = 'none'
 
             sessaoConsultaAlunos.style.display        = 'none'
             sessaoConsultaProfessores.style.display   = 'block'
             sessaoConsultaTurmas.style.display        = 'none'
 
-            Professor.style.display             = 'block'
+            Professor.style.display                   = 'block'
             for(let i in bancoProfessores){ 
                 cartoesProf += bancoProfessores[i].card();
             }
@@ -576,13 +562,13 @@ function exibeGeral(tipo) {
 
         case 2:
 
-            sessaoCadastro.style.display    = 'none'
+            sessaoCadastro.style.display              = 'none'
 
             sessaoConsultaAlunos.style.display        = 'none'
             sessaoConsultaProfessores.style.display   = 'none'
             sessaoConsultaTurmas.style.display        = 'block'
 
-            Turma.style.display                 = 'block'
+            Turma.style.display                       = 'block'
             for(let i in bancoTurma){ 
                 cartoesTurma += bancoTurma[i].card();
             }
@@ -592,6 +578,5 @@ function exibeGeral(tipo) {
         default:
                 alert('ERRO')
     
-
 }
   }
